@@ -1,50 +1,94 @@
-body{
-    background-color: #ffffff;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+/* Reset بعض القيم الافتراضية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-div{
-    margin-top: 220px;
+
+/* إعداد الجسم */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
-#age{
-    width: 300px;
-    height: 20px;
-    border-radius: 10px;
+
+/* تنسيق الحاوية */
+div {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-#age :focus{
-    border: none;
+
+/* تنسيق الإدخال */
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-p{
-    font-size: 20px;
-    font-weight: 700;
+
+/* تنسيق الزر */
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-button{
-    background-color: #116614;
-    color: #ffff;
-    width: 85px;
-    height: 32px;
-    font-size: 15px;
-    font-weight: 100;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 5px 9px 16px black;
-        margin-top: 15px;
+
+button:hover {
+  background-color: #005f99;
 }
-#result{
-    padding: 6px;
-    background-color: #172629;
-    color: white;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 5px 9px 16px black;
+
+/* تنسيق النص */
+p, span {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-.me{
-    margin-top: 40px;
-    font-size: 15px;
-    font-weight: 100;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+.me {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.me a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.me a:hover {
+  text-decoration: underline;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  div {
+    padding: 15px;
+  }
+
+  input[type="number"], button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  p, span {
+    font-size: 14px;
+  }
 }
